@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var Let Const</title>
+</head>
+<body>
+    <div id="main"></div>
+    <script>
+        // Value print usin var
+        // var fullName = "Vikas Kumar";
+        // document.getElementById('main').innerHTML = fullName;
+        // console.log(fullName);
+
+        // Value print using let
+        // let fullName = "Vikas Kumar";
+        // console.log(fullName);
+        // fullName = "Aayansh Kumar" // We can change the value using let variable
+        // console.log(fullName);
+
+        let fullName = "Vikas Kumar";
+        {
+            let fullName1 = "Vikas Kumar Digglia";
+            console.log(fullName1);
+        }
+        // console.log(fullName);
+        fullName = "Aayansh Kumar" // We can change the value using let variable
+        console.log(fullName);
+
+        // Value print using const
+        const fullName2 = "vikas Kumar";
+        // console.log(fullName2);
+        fullName2 = "Aayansh Kumar"; // We can not change the value using const variable
+        console.log(fullName2);
+
+    </script>
+</body>
+</html>

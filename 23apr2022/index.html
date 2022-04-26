@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2</title>
+</head>
+<body>
+
+    <div id="boolean"></div>
+    <div id="concatenate"></div>
+    <div id="object"></div>
+    <div id="emptyObject"></div>
+
+    <script>
+        //1. Boolean Variable Example
+        {
+            let decide = 1;
+            document.getElementById('boolean').innerHTML = Boolean(decide);
+            // console.log(decide);
+        }
+        let decide = "Vikas kumar";
+        document.getElementById('boolean').innerHTML = decide;
+        // console.log(decide);
+
+        //2. Concatenation
+        let str1 = "Aayansh";
+        let str2 = "Kumar";
+        document.getElementById('concatenate').innerHTML = str1 + ' ' + str2;
+        //console.log(str1 + ' ' + str2);
+
+        //3. Object
+        let person = {name: "Vikas",age: "30",habit: "Reading"};
+        // document.getElementById('object').innerHTML = "Name:" + person.name;
+        // document.getElementById('object').innerHTML = "Name:" + person.name + " " + "Age:" + person.age;
+        document.getElementById('object').innerHTML = "Name:" + person.name + " " + "Age:" + person.age + " " + "Habit:" + person.habit;
+
+        //3. Empty Object
+        let Person1 = {};
+        Person1.name = "vikas";
+        Person1.Age = "30";
+        Person1.Habit = "Reading";
+        // document.getElementById('emptyObject').innerHTML = Person1;
+        // let mydata = Object.values(Person1);
+        let mydata = JSON.stringify(Person1);
+        document.getElementById('emptyObject').innerHTML = mydata;
+        console.log(Person1);
+
+        // Change Value In object
+        Person1.name = "Noor";
+        Person1.Age = "56";
+        let mydata1 = JSON.stringify(Person1);
+        document.getElementById('emptyObject').innerHTML = mydata1;
+        console.log(Person1);
+
+        // Add Value In object
+        Person1.Country = "Bharat";
+        let mydata2 = JSON.stringify(Person1);
+        document.getElementById('emptyObject').innerHTML = mydata2;
+        console.log(Person1);
+    </script>
+</body>
+</html>

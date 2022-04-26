@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern Assignment</title>
+</head>
+<body>
+    <!-- https://www.tutorialstonight.com/js/javascript-star-pattern.php -->
+    <script>
+        // Question 1
+        // *****
+        // *****
+        // *****
+        // *****
+        // *****
+        console.log('Question 1');
+        // document.write('Question 1 <br>');
+        
+        let n=5;
+        let patern1="";
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j < n; j++) {
+                patern1 += "*";
+            }
+            patern1 += "\n";
+            // patern1 += "<br>";
+        }
+        console.log(patern1);
+        // document.write(patern1);
+
+        // Question 2
+        // *
+        // **
+        // ***
+        // ****
+        // *****
+        console.log('Question 2');
+        // document.write('<br> Question 2 <br>');
+        let patern2="";
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j <= i; j++) {
+                patern2 += "*";
+            }
+            patern2 += "\n";
+            // patern2 += "<br>";
+        }
+        console.log(patern2);
+        // document.write(patern2);
+
+        console.log('Question 3');
+        let patern3="";
+        for (let i = n; i > 0; i--) {
+            for (let j = 0; j < i; j++) {
+                patern3 += "*";
+            }
+            patern3 += "\n"
+        }
+        console.log(patern3);
+
+        console.log('Question 4');
+        let patern4 = "";
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= i; j++) {
+                patern4 += j + " ";
+            }
+            patern4 += "\n"
+        }
+        console.log(patern4);
+
+        console.log('Question 5');
+        const patern5 = (n) => {
+            let patValue = "";
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j <= i; j++) {
+                    patValue += "*";
+                }
+                patValue += "\n"
+            }
+            for (let i = n-1; i > 0; i--) {
+                for (let j = 0; j < i; j++) {
+                    patValue += "*";
+                }
+                patValue += "\n";
+            }
+            console.log(patValue);
+        }; patern5(5);
+
+    </script>
+</body>
+</html>

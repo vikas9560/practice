@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3</title>
+</head>
+<body>
+    <div id="divideBy4"></div>
+    <div id="tableOf2"></div>
+
+    <script>
+        // 1. Write a program to print all numbers divisible by 4 between 4 to 80.
+        // Que: Find Total Number divide by 4 and how to print on browser one by one
+        let x;
+        let count=0;
+        let numberlist = '<ul>';
+        for(x=4;x<=80;x++){
+            if(x%4==0){
+                //document.getElementById('divideBy4').innerHTML = "Total Numbers divide by 4 are: " + x;
+                numberlist =  numberlist + `<li>${x}</li>`; //(Append html)
+                // console.log('Numbers divide by 4 are: ' + x)
+                count++;
+            }
+        }
+        numberlist += '</ul>'; //(numberlist = numberlist + '/ul')
+        document.getElementById('divideBy4').innerHTML = numberlist;
+        //console.log(numberlist);
+
+        //console.log('Total Numbers divide by 4 are: ' + count)
+
+        // 2. Write a program to print message according to his age: -> if age is less than 10 print "you are child" -> if age is less than 18 and greater than 10 print "you are teen" -> if age is greater 18 and less than 40 print "you are young" -> if age is greater 40 print "you are moving towards old" -> using switch case as well
+        let age;
+        for(age=0;age<=150;age++){
+            // if(age<10){
+            //     console.log('You are child')
+            // }
+            // else if(age>10 && age<18){
+            //     console.log('You are teen')
+            // }
+            // else if(age>18 && age<40){
+            //     console.log('You are young')
+            // }
+            // else if (age>40){
+            //     console.log('you are moving towards old')
+            // }
+        }
+        
+        // const age2 = (age) => {
+        //     switch(age){
+        //         case (age<10): console.log('You are child');
+        //         break;
+        //         case (age<20): console.log('You are teen');
+        //         break;
+        //         case (age<50): console.log('You are young');
+        //         break;
+        //         case (age>50): console.log('You are Old');
+        //         break;
+        //         default: console.log('You are deman');
+        //     }
+        // }
+        // age2(25);
+
+        // 3. write a program to swap two numbers using third variable.
+        let b=10;
+        let c=20;
+        let d = c;
+        c=b;
+        b=d;
+        //console.log('Value of b: ' + b + "\n" + 'Value of c: ' + c);
+
+        // 4. write a program to print 2's table
+        // Q: Print in New Line on browser
+        for(let a=1;a<=10;a++){
+            //document.getElementById('tableOf2').innerHTML = "Table of 2* " + a + ": " + a * 2;
+            //console.log("Table of 2*" + a + ": " + a*2);
+        }
+    </script>
+</body>
+</html>
