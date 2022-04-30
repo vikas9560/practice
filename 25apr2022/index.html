@@ -39,8 +39,8 @@
         console.log('Question 2');
         // document.write('<br> Question 2 <br>');
         let patern2="";
-        for (let i = 0; i < n; i++) {
-            for (let j = 0; j <= i; j++) {
+        for (let row = 0; row < n; row++) {
+            for (let col = 0; col <= row; col++) {
                 patern2 += "*";
             }
             patern2 += "\n";
@@ -71,21 +71,33 @@
 
         console.log('Question 5');
         const patern5 = (n) => {
-            let patValue = "";
+            let patValue5 = "";
             for (let i = 0; i < n; i++) {
                 for (let j = 0; j <= i; j++) {
-                    patValue += "*";
+                    patValue5 += "*";
                 }
-                patValue += "\n"
+                patValue5 += "\n"
             }
             for (let i = n-1; i > 0; i--) {
                 for (let j = 0; j < i; j++) {
-                    patValue += "*";
+                    patValue5 += "*";
                 }
-                patValue += "\n";
+                patValue5 += "\n";
             }
-            console.log(patValue);
-        }; patern5(5);
+            console.log(patValue5);
+        }; patern5(10);
+
+        console.log("Question 6");
+        const patern6 = (n) => {
+            let patValue6 = "";
+            // for (let row = n; row >= 0; row--) {
+            //     for (let col = 0; col <= n; col++) {
+            //         patValue6 += "*";
+            //     }
+            //     patValue6 += "\n";
+            // }
+            console.log(patValue6);
+        };patern6(5);
 
     </script>
 </body>
