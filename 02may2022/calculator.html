@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <table width="400" align="center" border="1" cellspacing="5px" cellpadding="10px">
+        <tr>
+            <td colspan="4">Num1: <input type="text" style="width: 100%;" placeholder="Enter Number" id="number1"></td>
+        </tr>
+        <tr>
+            <td colspan="4">Num2: <input type="text" style="width: 100%;" placeholder="Enter Number" id="number2"></td>
+        </tr>
+        <tr>
+            <td colspan="4">Output: <span id="result"></span></td>
+        </tr>
+        <tr>
+            <td><button style="width: 100%;" onclick="calsioperation('add')">Add</button></td>
+            <td><button style="width: 100%;" onclick="calsioperation('sub')">Sub</button></td>
+            <td><button style="width: 100%;" onclick="calsioperation('mul')">Mul</button></td>
+            <td><button style="width: 100%;" onclick="calsioperation('div')">Div</button></td>
+        </tr>
+    </table>
+
+    <script>
+        function calsioperation(action ='add'){
+            var num1 = parseInt(document.getElementById('number1').value);
+            var num2 = parseInt(document.getElementById('number2').value);
+
+            if(action === 'add'){
+                let num3 = num1 + num2;
+                document.getElementById('result').innerHTML = num3;
+            } else if(action === 'sub'){
+                let num3 = num1 - num2;
+                document.getElementById('result').innerHTML = num3;
+            } else if(action === 'mul'){
+                let num3 = num1 * num2;
+                document.getElementById('result').innerHTML = num3;
+            } else if (num2 == 0 && action === 'div') {
+                document.getElementById('result').innerHTML = "Num2 should be greater then 0";
+            } else {
+                let num3 = num1 / num2;
+                document.getElementById('result').innerHTML = num3;
+            }
+        };
+    </script>
+</body>
+</html>

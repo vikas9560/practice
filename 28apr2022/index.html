@@ -34,46 +34,60 @@
             ];
 
             //const totalyears = employees.filter((exp) => exp.years);
-            // const totalyears = employees.filter((exp) => exp.years == 13);
+            //const totalyears = employees.filter((exp) => exp.years == 13);
             //console.log(totalyears);
 
-            var totalyears = employees.reduce(function (exp, emp) {
-                // return exp + employee.years;
-                console.log(exp + totalyears.years)
-            }, 0);
+            // var totalyears = employees.reduce(function (exp, emp) {
+            //     return exp + emp.years;
+            // }, 0);
+            
+            // console.log(totalyears)
+
+            //var totalyears = employees.reduce((exp, emp) => exp + emp.years,0);
+            //console.log(totalyears)
 
 
             // Expected Output: 65
             // 2.
-            // var members = [
-            //     {
-            //         id: 111,
-            //         name: "Chelsea Foster",
-            //         position: "Intern",
-            //     },
-            //     {
-            //         id: 102,
-            //         name: "Aggie Sparling",
-            //         position: "Employee",
-            //     },
-            //     {
-            //         id: 123,
-            //         name: "Timmy Matthews",
-            //         position: "Intern",
-            //     },
-            //     {
-            //         id: 66,
-            //         name: "Emmet Foster",
-            //         position: "Employee",
-            //     }
-            // ];
+            var members = [
+                {
+                    id: 111,
+                    name: "Chelsea Foster",
+                    position: "Intern",
+                },
+                {
+                    id: 102,
+                    name: "Aggie Sparling",
+                    position: "Employee",
+                },
+                {
+                    id: 123,
+                    name: "Timmy Matthews",
+                    position: "Intern",
+                },
+                {
+                    id: 66,
+                    name: "Emmet Foster",
+                    position: "Employee",
+                }
+            ];
 
             // const member = members.filter((post) => post.position == "Intern");
             // console.log(member);
 
 
-            // var members = [{ id: 111, name: "Chelsea Foster", workExp: 7, deptExp: 6, isPermanent: true, }, { id: 102, name: "Aggie Sparling", workExp: 13, deptExp: 10, isPermanent: false, }, { id: 123, name: "Timmy Matthews", workExp: 23, deptExp: 15, isPermanent: false, }, { id: 66, name: "Emmet Foster", workExp: 22, deptExp: 9, isPermanent: true, }, { id: 89, name: "Brent Dolan", workExp: 16, deptExp: 12, isPermanent: true, },];
-            // Expected List: i) List of all permanent employees.ii) List of all non - permanent employees.
+            //3.
+            var members = [
+                { id: 111, name: "Chelsea Foster", workExp: 7, deptExp: 6, isPermanent: true, }, 
+                { id: 102, name: "Aggie Sparling", workExp: 13, deptExp: 10, isPermanent: false, }, 
+                { id: 123, name: "Timmy Matthews", workExp: 23, deptExp: 15, isPermanent: false, }, 
+                { id: 66, name: "Emmet Foster", workExp: 22, deptExp: 9, isPermanent: true, }, 
+                { id: 89, name: "Brent Dolan", workExp: 16, deptExp: 12, isPermanent: true, },
+            ];
+            // Expected List: 
+            // i) List of all permanent employees.
+            // ii) List of all non - permanent employees.
+
     </script>
 </body>
 </html>
