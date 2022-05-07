@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+</head>
+<body>
+
+    <table align="center" width="600" border="1" cellpadding="10px" cellspacing="10px">
+        <tr>
+            <td>Current Time</td>
+            <td id="digitalClock"></td>
+        </tr>
+        <tr>
+            <td>All Time</td>
+            <td id="digitalClock1"></td>
+        </tr>
+        <tr>
+            <td>Current Time</td>
+            <td id="digitalClock2"></td>
+        </tr>
+    </table>
+
+    <script>
+        const getCurrentTime = () => {
+            let date = new Date();
+            document.getElementById('digitalClock').innerHTML = date;
+
+            let alltime = `${date.toDateString()} <br> 
+                                ${date.getDate().toString().padStart(2,0)} <br> 
+                                ${date.getDay().toString().padStart(2,0)} <br> 
+                                ${date.getFullYear().toString().padStart(2,0)} <br> 
+                                ${date.getHours().toString().padStart(2,0)} <br> 
+                                ${date.getMinutes().toString().padStart(2,0)} <br> 
+                                ${date.getMonth().toString().padStart(2,0)} <br> 
+                                ${date.getTime().toString().padStart(2,0)} <br> 
+                                ${date.getSeconds().toString().padStart(2,0)} <br> 
+                                ${date.getMilliseconds().toString().padStart(2,0)}`;
+            document.getElementById('digitalClock1').innerHTML = alltime;
+
+            let currenttime = `${date.getDate()} ${date.toLocaleString('default',{month: 'short'})} ${date.getFullYear()}, ${date.getHours().toString().padStart(2, 0)}:${date.getMinutes().toString().padStart(2,0)}:${date.getSeconds().toString().padStart(2,0)}`;
+                document.getElementById('digitalClock2').innerHTML = currenttime;
+        }; getCurrentTime();
+
+        setInterval(() => {
+            getCurrentTime();
+        }, 1000);
+    </script>
+    
+</body>
+</html>
