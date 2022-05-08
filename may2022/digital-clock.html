@@ -40,7 +40,7 @@
                                 ${date.getMilliseconds().toString().padStart(2,0)}`;
             document.getElementById('digitalClock1').innerHTML = alltime;
 
-            let currenttime = `${date.getDate()} ${date.toLocaleString('default',{month: 'short'})} ${date.getFullYear()}, ${date.getHours().toString().padStart(2, 0)}:${date.getMinutes().toString().padStart(2,0)}:${date.getSeconds().toString().padStart(2,0)}`;
+            let currenttime = `${date.getDate()} ${date.toLocaleString('default',{month: 'short'})} ${date.getFullYear()} ${date.toLocaleString('default', { weekday: 'long' })}, ${date.getHours().toString().padStart(2, 0)}:${date.getMinutes().toString().padStart(2,0)}:${date.getSeconds().toString().padStart(2,0)}`;
                 document.getElementById('digitalClock2').innerHTML = currenttime;
         }; getCurrentTime();
 

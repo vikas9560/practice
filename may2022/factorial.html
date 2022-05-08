@@ -26,11 +26,15 @@
                 let fact = 1;
                 for (let i = num; i > 0; i--) {
                     fact *= i; //(fact = fact * i)
-                    document.getElementById('factorial1').innerHTML += i + " * ";
+                    if(i===1){
+                        document.getElementById('factorial1').innerHTML += i;
+                    } else{
+                        document.getElementById('factorial1').innerHTML += i + " * ";
+                    }
                 }
                 document.getElementById('factorial2').innerHTML = `The Factorial of  ${num} : ` + fact;
-            };factorial(2);
-        }
+            }
+        }; factorial(5);
     </script>
 
 </body>
