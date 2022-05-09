@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        *{box-sizing: border-box;}
+        td,th{border-collapse: collapse;}
+        input{width: 100%;padding: 5px 10px;}
+        button{cursor: pointer;padding: 5px 10px;}
+        .buttonsTable{margin-bottom: 10px;}
+        #formTable,#hideForm{display: none;}
+    </style>
+</head>
+<body>
+
+    <table class="buttonsTable" align="center" width="600" border="1px" cellpadding="10px" cellspacing="0px">
+        <tr>
+            <th>
+                <button onclick="showform()" id="showForm">Show Form</button>
+                <button onclick="hideform()" id="hideForm">Hide Form</button>
+            </th>
+        </tr>
+    </table>
+
+    <table id="formTable" align="center" width="600" border="1px" cellpadding="10px" cellspacing="0px">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="" id="" Placeholder="Enter your name"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" name="" id="" Placeholder="ex:yourname@domain.com"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="" id="" Placeholder="Password"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button type="submit">Submit</button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        var formtable = document.getElementById('formTable');
+        var showformbutton = document.getElementById('showForm');
+        var hideformbutton = document.getElementById('hideForm');
+        
+        function showform() {
+            formtable.style.display = 'table';
+            showformbutton.style.display = 'none';
+            hideformbutton.style.display = 'inline-block'
+        }
+        function hideform() {
+            formtable.style.display = 'none';
+            showformbutton.style.display = 'inline-block';
+            hideformbutton.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
