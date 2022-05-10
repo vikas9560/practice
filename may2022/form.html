@@ -31,15 +31,15 @@
     <table id="formTable" align="center" width="600" border="1px" cellpadding="10px" cellspacing="0px">
         <tr>
             <td>Name</td>
-            <td><input type="text" name="" id="yourname" Placeholder="Enter your name"></td>
+            <td><input type="text" name="youremail" id="yourname" Placeholder="Enter your name"></td>
         </tr>
         <tr>
             <td>Email</td>
-            <td><input type="email" name="youremail" id="" Placeholder="ex:yourname@domain.com"></td>
+            <td><input type="email" name="youremail" id="youremail" Placeholder="ex:yourname@domain.com"></td>
         </tr>
         <tr>
             <td>Password</td>
-            <td><input type="password" name="yourpassword" id="" Placeholder="Password"></td>
+            <td><input type="password" name="yourpassword" id="yourpassword" Placeholder="Password"></td>
         </tr>
         <tr>
             <td colspan="2" align="center">
@@ -66,8 +66,10 @@
         function submitform() {
             // console.log(document);
             var formname = document.getElementById('yourname').value;
+            var formemail = document.getElementById('youremail').value;
+            var formepass = document.getElementById('yourpassword').value;
             // console.log(formname)
-            document.getElementById('formDate').innerHTML = formname;
+            document.getElementById('formDate').innerHTML = "Name: " + formname + " <a href='#'>Delete</a> <br>" + "Email: " + formemail + " <a href='#'>Delete</a><br>" + "Password: " + formepass + " <a href='#'>Delete</a>";
 
             // list order (assignment) with delete
         }
