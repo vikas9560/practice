@@ -23,24 +23,27 @@
                 <button onclick="hideform()" id="hideForm">Hide Form</button>
             </th>
         </tr>
+        <tr>
+            <td id="formDate" align="center">Form data after submit</td>
+        </tr>
     </table>
 
     <table id="formTable" align="center" width="600" border="1px" cellpadding="10px" cellspacing="0px">
         <tr>
             <td>Name</td>
-            <td><input type="text" name="" id="" Placeholder="Enter your name"></td>
+            <td><input type="text" name="" id="yourname" Placeholder="Enter your name"></td>
         </tr>
         <tr>
             <td>Email</td>
-            <td><input type="email" name="" id="" Placeholder="ex:yourname@domain.com"></td>
+            <td><input type="email" name="youremail" id="" Placeholder="ex:yourname@domain.com"></td>
         </tr>
         <tr>
             <td>Password</td>
-            <td><input type="password" name="" id="" Placeholder="Password"></td>
+            <td><input type="password" name="yourpassword" id="" Placeholder="Password"></td>
         </tr>
         <tr>
             <td colspan="2" align="center">
-                <button type="submit">Submit</button>
+                <button onclick="submitform()" type="submit">Submit</button>
             </td>
         </tr>
     </table>
@@ -49,7 +52,7 @@
         var formtable = document.getElementById('formTable');
         var showformbutton = document.getElementById('showForm');
         var hideformbutton = document.getElementById('hideForm');
-        
+
         function showform() {
             formtable.style.display = 'table';
             showformbutton.style.display = 'none';
@@ -59,6 +62,14 @@
             formtable.style.display = 'none';
             showformbutton.style.display = 'inline-block';
             hideformbutton.style.display = 'none';
+        }
+        function submitform() {
+            // console.log(document);
+            var formname = document.getElementById('yourname').value;
+            // console.log(formname)
+            document.getElementById('formDate').innerHTML = formname;
+
+            // list order (assignment) with delete
         }
     </script>
 </body>
