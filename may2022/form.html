@@ -74,15 +74,13 @@
             var formepass = document.getElementById('yourpassword').value;
             // console.log(formname)
             document.getElementById('formData').innerHTML = "<li>Name: " + formname + " <a href='#' onclick='deleteList()'>Delete</a></li>" + "<li>Email: " + formemail + " <a href='#' onclick='deleteList()'>Delete</a></li>" + "<li>Password: " + formepass + " <a href='#' onclick='deleteList()'>Delete</a></li>";
-
-            // list order (assignment) with delete
         }
 
         function deleteList(){
             // event.target will be the input element.
             var anc = event.target.parentNode;
-            var li = anc.parentNode; // the row to be removed
-            anc.parentNode.removeChild(anc);
+            var list = anc.parentNode; // the row to be removed
+            list.removeChild(anc);
         }
     </script>
 </body>
