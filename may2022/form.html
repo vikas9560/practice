@@ -24,7 +24,11 @@
             </th>
         </tr>
         <tr>
-            <td id="formDate" align="center">Form data after submit</td>
+            <td align="center">
+                <ul id="formData">
+                    <li>Form data after submit</li>
+                </ul>
+            </td>
         </tr>
     </table>
 
@@ -69,9 +73,16 @@
             var formemail = document.getElementById('youremail').value;
             var formepass = document.getElementById('yourpassword').value;
             // console.log(formname)
-            document.getElementById('formDate').innerHTML = "Name: " + formname + " <a href='#'>Delete</a> <br>" + "Email: " + formemail + " <a href='#'>Delete</a><br>" + "Password: " + formepass + " <a href='#'>Delete</a>";
+            document.getElementById('formData').innerHTML = "<li>Name: " + formname + " <a href='#' onclick='deleteList()'>Delete</a></li>" + "<li>Email: " + formemail + " <a href='#' onclick='deleteList()'>Delete</a></li>" + "<li>Password: " + formepass + " <a href='#' onclick='deleteList()'>Delete</a></li>";
 
             // list order (assignment) with delete
+        }
+
+        function deleteList(){
+            // event.target will be the input element.
+            var anc = event.target.parentNode;
+            var li = anc.parentNode; // the row to be removed
+            anc.parentNode.removeChild(anc);
         }
     </script>
 </body>
