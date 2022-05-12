@@ -25,9 +25,17 @@
         </tr>
         <tr>
             <td align="center">
-                <ul id="formData">
-                    <li>Form data after submit</li>
-                </ul>
+                <table style="width: 100%;" border="1px" cellpadding="10px" cellspacing="0px" align="center">
+                    <thead>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody id="formData">
+
+                    </tbody>
+                </table>
             </td>
         </tr>
     </table>
@@ -73,15 +81,20 @@
             var formemail = document.getElementById('youremail').value;
             var formepass = document.getElementById('yourpassword').value;
             // console.log(formname)
-            document.getElementById('formData').innerHTML = "<li>Name: " + formname + " <a href='#' onclick='deleteList()'>Delete</a></li>" + "<li>Email: " + formemail + " <a href='#' onclick='deleteList()'>Delete</a></li>" + "<li>Password: " + formepass + " <a href='#' onclick='deleteList()'>Delete</a></li>";
+            document.getElementById('formData').innerHTML += "<tr><td align='center'>" + formname + "</td>" + "<td align='center'>" + formemail + "</td>" + "<td align='center'>" + formepass + "</td><td align='center'><a href='#' onclick='deleteList()'>Delete</a></td></tr>";
         }
 
         function deleteList(){
             // event.target will be the input element.
             var anc = event.target.parentNode;
-            var list = anc.parentNode; // the row to be removed
-            list.removeChild(anc);
+            //var list = anc.parentNode; // the row to be removed
+            anc.parentElement.remove();
         }
+
+        // List print and delete row
+
     </script>
 </body>
 </html>
+
+

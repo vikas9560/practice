@@ -68,7 +68,10 @@
         const higherNumber = parseInt(prompt('Enter higher number: '));
         console.log(`The prime numbers between ${lowerNumber} and ${higherNumber} are:`);
 
+        const arr = [];
+
         for (let i = lowerNumber; i <= higherNumber; i++) {
+
             let isprime1 = false;
             for (let j = 2; j < i; j++) {
                 if (i % j == 0) {
@@ -77,9 +80,13 @@
                 }
             }
             if (i > 1 && isprime1 == false) {
-                console.log(i);
+                // console.log(i);
+                document.getElementById('primenumber3').innerHTML += i + " , " ;
+                //arr.push(i);
             }
         }
+        console.log(arr);
+
 
     </script>
 
