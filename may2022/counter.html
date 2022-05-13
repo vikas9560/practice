@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        *{box-sizing: border-box;}
+        td,th{border-collapse: collapse;}
+        button{cursor: pointer;padding: 5px 10px;}
+        .buttonsTable{margin-bottom: 20px;}
+    </style>
+</head>
+<body>
+
+    <table class="buttonsTable" align="center" width="600" border="1px" cellpadding="10px" cellspacing="0px">
+        <tr>
+            <th colspan="3" align="center">
+                <h1 style="margin: 0;">Counter 1</h1>
+            </th>
+        </tr>
+        <tr>
+            <td colspan="3" align="center">
+                <input type="number" name="" id="counter1" value="2">
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <button onclick="decrementCounter1()">Decrement</button>
+            </td>
+            <td align="center">
+                <button onclick="resetCounter1()">Reset</button>
+            </td>
+            <td align="center">
+                <button onclick="incrementCounter1()">Increment</button>
+            </td>
+        </tr>
+    </table>
+
+    <table class="buttonsTable" align="center" width="600" border="1px" cellpadding="10px" cellspacing="0px">
+        <tr>
+            <th colspan="3" align="center">
+                <h1 style="margin: 0;">Counter 2</h1>
+            </th>
+        </tr>
+        <tr>
+            <td colspan="3" align="center">
+                <h3 id="counter2" style="margin: 0;">Counter Value Here</h3>
+                <!-- <h3 id="counter2" style="margin: 0;">0</h3> -->
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <button onclick="decrementCounter2()">Decrement</button>
+            </td>
+            <td align="center">
+                <button onclick="resetCounter2()">Reset</button>
+            </td>
+            <td align="center">
+                <button onclick="incrementCounter2()">Increment</button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        // Counter 1
+        var counter = document.getElementById('counter1').value;
+
+        const resetCounter1 = () => {
+            if(counter > 0 || counter < 0){
+                document.getElementById('counter1').value = 0;
+            }
+        }
+        const decrementCounter1 = () => {
+            var decount = document.getElementById('counter1').value
+            if(decount > 0){
+                decount--;
+                document.getElementById('counter1').value = decount;
+            }
+        }
+        const incrementCounter1 = () => {
+            var incount = document.getElementById('counter1').value
+            incount++;
+            document.getElementById('counter1').value = incount;
+        }
+
+        // Counter 2
+        var count = 0;
+        var counterVal = document.getElementById('counter2').textContent;
+
+        const resetCounter2 = () => {
+            if(counterVal){
+                document.getElementById('counter2').textContent = 0;
+                counterVal = 0;
+            }
+        }
+
+        const decrementCounter2 = () => {
+            if(counterVal > 0){
+                counterVal--;
+                document.getElementById('counter2').textContent = counterVal;
+            }
+        }
+
+        const incrementCounter2 = () => {
+            if (counterVal >= 0) {
+                counterVal++;
+                document.getElementById('counter2').textContent = counterVal;
+            }
+        }
+
+    </script>
+</body>
+</html>
+
+
