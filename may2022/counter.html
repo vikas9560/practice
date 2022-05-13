@@ -63,10 +63,33 @@
         </tr>
     </table>
 
+    <table class="buttonsTable" align="center" width="600" border="1px" cellpadding="10px" cellspacing="0px">
+        <tr>
+            <th colspan="3" align="center">
+                <h1 style="margin: 0;">Counter 3</h1>
+            </th>
+        </tr>
+        <tr>
+            <td colspan="3" align="center">
+                <h2 style="margin: 0;" id="counter">0</h2>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <button class="counterBtn prevBtn">lower count</button>
+            </td>
+            <td align="center">
+                <button class="counterBtn resetBtn">Reset</button>
+            </td>
+            <td align="center">
+                <button class="counterBtn nextBtn">add count</button>
+            </td>
+        </tr>
+    </table>
+
     <script>
         // Counter 1
         var counter = document.getElementById('counter1').value;
-
         const resetCounter1 = () => {
             if(counter > 0 || counter < 0){
                 document.getElementById('counter1').value = 0;
@@ -86,29 +109,51 @@
         }
 
         // Counter 2
-        var count = 0;
-        var counterVal = document.getElementById('counter2').textContent;
-
+        var counterVal = 0;
         const resetCounter2 = () => {
             if(counterVal){
                 document.getElementById('counter2').textContent = 0;
                 counterVal = 0;
             }
         }
-
         const decrementCounter2 = () => {
             if(counterVal > 0){
                 counterVal--;
                 document.getElementById('counter2').textContent = counterVal;
             }
         }
-
         const incrementCounter2 = () => {
             if (counterVal >= 0) {
                 counterVal++;
                 document.getElementById('counter2').textContent = counterVal;
             }
         }
+
+        // Counter 3
+        (function () {
+            const buttons = document.querySelectorAll('.counterBtn')
+            let count = 0
+            buttons.forEach(function(button){
+                button.addEventListener('click', function () {
+                    if (button.classList.contains('prevBtn')) {
+                        count--
+                    } else if (button.classList.contains('nextBtn')) {
+                        count++
+                    } else if (button.classList.contains('resetBtn')) {
+                        count = 0
+                    }
+                    const counter = document.querySelector('#counter')
+                    counter.textContent = count
+                    if (count < 0) {
+                        counter.style.color = 'red'
+                    } else if (count > 0) {
+                        counter.style.color = 'green'
+                    } else {
+                        counter.style.color = '#333333'
+                    }
+                })
+            })
+        })()
 
     </script>
 </body>
